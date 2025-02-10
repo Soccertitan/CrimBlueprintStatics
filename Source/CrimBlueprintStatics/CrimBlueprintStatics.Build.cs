@@ -12,6 +12,7 @@ public class CrimBlueprintStatics : ModuleRules
 			new string[]
 			{
 				"Core",
+				"GameplayTags",
 			}
 			);
 			
