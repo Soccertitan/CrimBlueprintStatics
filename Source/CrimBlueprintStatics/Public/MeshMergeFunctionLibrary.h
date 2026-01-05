@@ -1,4 +1,4 @@
-﻿// Copyright Soccertitan
+﻿// Copyright Soccertitan 2025
 
 #pragma once
 
@@ -6,7 +6,7 @@
 #include "GameplayTagContainer.h"
 #include "SkeletalMeshMerge.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "CrimMeshMergeFunctionLibrary.generated.h"
+#include "MeshMergeFunctionLibrary.generated.h"
 
 USTRUCT(BlueprintType)
 struct CRIMBLUEPRINTSTATICS_API FSkeletalMeshMap
@@ -87,7 +87,7 @@ struct CRIMBLUEPRINTSTATICS_API FSkeletalMeshMergeParams
  * 
  */
 UCLASS()
-class CRIMBLUEPRINTSTATICS_API UCrimMeshMergeFunctionLibrary : public UBlueprintFunctionLibrary
+class CRIMBLUEPRINTSTATICS_API UMeshMergeFunctionLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 

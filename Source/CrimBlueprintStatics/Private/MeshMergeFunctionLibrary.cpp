@@ -1,12 +1,12 @@
-﻿// Copyright Soccertitan
+﻿// Copyright Soccertitan 2025
 
 
-#include "CrimMeshMergeFunctionLibrary.h"
+#include "MeshMergeFunctionLibrary.h"
 
 #include "SkeletalMeshMerge.h"
 #include "Engine/SkeletalMeshSocket.h"
 
-USkeletalMesh* UCrimMeshMergeFunctionLibrary::MergeMeshes(const FSkeletalMeshMergeParams& Params)
+USkeletalMesh* UMeshMergeFunctionLibrary::MergeMeshes(const FSkeletalMeshMergeParams& Params)
 {
 	TArray<FSkeletalMeshMap> MeshesToMergeCopy;
 	for (const FSkeletalMeshMap& Entry : Params.BaseMeshesToMerge)
@@ -122,7 +122,7 @@ USkeletalMesh* UCrimMeshMergeFunctionLibrary::MergeMeshes(const FSkeletalMeshMer
 	return BaseMesh;
 }
 
-void UCrimMeshMergeFunctionLibrary::AddDynamicMesh(FSkeletalMeshMergeParams& Params, const FSkeletalMeshMap& Map)
+void UMeshMergeFunctionLibrary::AddDynamicMesh(FSkeletalMeshMergeParams& Params, const FSkeletalMeshMap& Map)
 {
 	for (FSkeletalMeshMap& Entry : Params.DynamicMeshesToMerge)
 	{
@@ -135,7 +135,7 @@ void UCrimMeshMergeFunctionLibrary::AddDynamicMesh(FSkeletalMeshMergeParams& Par
 	Params.DynamicMeshesToMerge.Add(Map);
 }
 
-void UCrimMeshMergeFunctionLibrary::RemoveDynamicMesh(FSkeletalMeshMergeParams& Params, FGameplayTag Tag)
+void UMeshMergeFunctionLibrary::RemoveDynamicMesh(FSkeletalMeshMergeParams& Params, FGameplayTag Tag)
 {
 	if (Params.DynamicMeshesToMerge.IsEmpty())
 	{
