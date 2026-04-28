@@ -70,7 +70,7 @@ bool UCrimMathStatics::IsInCone(const FVector& ConeOrigin, const FVector& ConeDi
 
 	const float CosineAngleSquared = FMath::Pow(FMath::Cos(ConeHalfAngle / 180.0f * PI), 2);
 
-	return Dot > 0 && CosineSquared >= CosineAngleSquared;
+	return Dot >= 0.f && CosineSquared >= CosineAngleSquared;
 }
 
 float UCrimMathStatics::DistanceBetweenActors(AActor* Actor1, AActor* Actor2)
